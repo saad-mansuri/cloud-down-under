@@ -1,0 +1,150 @@
+html,
+body,
+* {
+    scrollbar-color: #ffbf00 rgba(223, 223, 223, 0.7607843137);
+    scroll-behavior: smooth;
+}
+
+/* Sticky Header */
+header.sticky-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    /* background-color: #FFCD3A; */
+    top: 0;
+    transform: translateY(-100%);
+    transition: .4s;
+}
+
+.sticky-header.nav-down {
+    transform: translateY(0);
+    transition: .4s;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.service-slider-btn {
+    color: #C7C7C7;
+}
+
+.service-slider-btn .arrow path {
+    fill: #C7C7C7;
+}
+
+.service-slider-btn .btn-thumb {
+    background-color: #FFFFFF;
+}
+
+.service-slider-btn.active {
+    color: #111111;
+}
+
+.service-slider-btn.active .arrow path {
+    fill: #111111;
+}
+
+.service-slider-btn.active .btn-thumb {
+    background-color: #FFCD3A;
+}
+
+/* .active .service-slider-btn {
+    color: #111111;
+}
+
+.active .service-slider-btn .arrow path {
+    fill: #111111;
+}
+
+.active .service-slider-btn .btn-thumb {
+    background-color: #FFCD3A;
+} */
+
+@media screen and (max-width: 1024px) {
+
+    .service-slider-btn {
+        color: #111111;
+    }
+
+    .service-slider-btn.active .btn-thumb {
+        background-color: #111111;
+    }
+
+    .service-slider-btn.active .btn-thumb svg path {
+        fill: #FFFFFF;
+    }
+}
+
+.project-wrapper {
+    overflow: auto;
+    -webkit-scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+.project-wrapper .item {
+    scroll-snap-align: start;
+}
+
+
+.our-process__background-blurry{
+    backdrop-filter: blur(20px);
+    background: #212121CC;
+}
+
+.btn{
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    padding: 14px 32px 14px 32px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.btn-primary{
+    background-color: #111111;
+    color: #FFCD3A;
+    border: 1px solid #111111;
+}
+
+.btn-primary:hover{
+    background-color: transparent;
+    color: #111111;
+    border: 1px solid #111111;
+}
+
+.btn-secondary{
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #ffffff;
+}
+
+.btn-secondary:hover{
+    background-color: #111111;
+    color: #FFCD3A;
+    border: 1px solid #111111;
+}
+
+.btn-transparent{
+    background-color: #212121;
+    color: #FFCD3A;
+    border: 1px solid #FFFFFF;
+}
+.btn-transparent:hover{
+    background-color: #FFCD3A;
+    color: #212121;
+    border: 1px solid #000000;
+}
