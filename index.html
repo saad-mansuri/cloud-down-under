@@ -23,9 +23,35 @@
     <link rel="stylesheet" href="./Assets/style/style.css">
     <link rel="stylesheet" href="./Assets/style/slick.css">
     <link rel="stylesheet" href="./Assets/style/custom.css?v=11">
+    <style>
+        .cdu-project-card.card {
+            position: sticky;
+            top: 0;
+        }
+
+        .cdu-project-card-inner.card__inner {
+            will-change: transform;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+            transform-origin: center top;
+        }
+
+        .cdu-project-cards.cards {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: repeat(var(--cards-count), var(--card-height));
+            gap: 40px 0;
+        }
+    </style>
 </head>
 
-<a href="#" class="fixed bottom-6 right-6 lg:bottom-[52px] lg:right-[52px] z-50 inline-flex items-center justify-center bg-[#ffffffcc] rounded-full w-14 h-14 md:w-16 md:h-16 xl:w-[88px] xl:h-[88px]">
+<a href="#"
+    class="fixed bottom-6 right-6 lg:bottom-[52px] lg:right-[52px] z-50 inline-flex items-center justify-center bg-[#ffffffcc] rounded-full w-14 h-14 md:w-16 md:h-16 xl:w-[88px] xl:h-[88px]">
     <img class="w-4 md:w-5 xl:w-ato" src="./Assets/img/chat-icon.svg" alt="">
 </a>
 
@@ -70,8 +96,7 @@
                 </ul>
 
                 <div class="">
-                    <a href="/"
-                        class="btn btn-secondary uppercase font-medium font-[poppins]">
+                    <a href="/" class="btn btn-secondary uppercase font-medium font-[poppins]">
                         Get In Touch
                     </a>
                 </div>
@@ -117,8 +142,7 @@
                 </ul>
 
                 <div class="flex items-center gap-4 lg:gap-10">
-                    <a href="/"
-                        class="btn btn-primary uppercase font-medium font-[poppins]">
+                    <a href="/" class="btn btn-primary uppercase font-medium font-[poppins]">
                         Get In Touch
                     </a>
                 </div>
@@ -153,8 +177,7 @@
                                 to Your <br class="sm:hidden"> Success!
                             </h4>
 
-                            <a href="/"
-                                class="btn btn-primary uppercase font-medium font-[poppins]">
+                            <a href="/" class="btn btn-primary uppercase font-medium font-[poppins]">
                                 Learn More
                             </a>
 
@@ -162,8 +185,11 @@
                     </div>
                     <div>
                         <div class="relative">
-                            <video preload="metadata" controls="" loop="" muted="" playsinline="" style="width:100%; height: auto;" id="hero-video" class="rounded-[14px]">
-                                <source src="https://v3.cdnpk.net/videvo_files/video/premium/partners0222/large_watermarked/BB_4edd32d2-d78c-4786-a846-477f8918d8db_preview.mp4" type="video/mp4">
+                            <video preload="metadata" controls="" loop="" muted="" playsinline=""
+                                style="width:100%; height: auto;" id="hero-video" class="rounded-[14px]">
+                                <source
+                                    src="https://v3.cdnpk.net/videvo_files/video/premium/partners0222/large_watermarked/BB_4edd32d2-d78c-4786-a846-477f8918d8db_preview.mp4"
+                                    type="video/mp4">
                             </video>
                             <!-- <video width="400" controls>
                                 <source src="https://www.rhad.agency/wp-content/uploads/2022/08/RHAD_Reel-1.mp4" type="video/mp4">
@@ -223,113 +249,115 @@
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-4 items-stretch gap-10 md:gap-8 2xl:gap-20">
                     <div class="lg:col-span-1">
-                        <div class="flex flex-col justify-between h-full w-full">
-                            <div class="mb-5 md:mb-12">
-                                <h5
-                                    class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-5 uppercase">
-                                    Trusted
-                                </h5>
-                                <p class="text-[#111111] text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                    Clousd down under is one of the world’s <br class="hidden 2xl:block"> largest IT
-                                    services provider helping.
-                                </p>
-                            </div>
-                            <div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                                <div>
-                                    <div class="bg-[#FFFFFF] rounded-xl p-5">
-                                        <div class="flex justify-between gap-2">
-                                            <div>
-                                                <img class="mb-[11px]" src="./Assets/img/projects/rating/1.png" alt="">
-                                                <img src="./Assets/img/projects/rating/5-star.png" alt="">
-                                            </div>
-                                            <div class="text-right">
-                                                <h5
-                                                    class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
-                                                    4.9
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
-                                                    140 Reviews
-                                                </p>
+                        <div class="sticky top-0">
+                            <div class="flex flex-col h-full w-full">
+                                <div class="mb-5 md:mb-12">
+                                    <h5
+                                        class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-5 uppercase">
+                                        Trusted
+                                    </h5>
+                                    <p class="text-[#111111] text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                        Clousd down under is one of the world’s <br class="hidden 2xl:block"> largest IT
+                                        services provider helping.
+                                    </p>
+                                </div>
+                                <div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                                    <div>
+                                        <div class="bg-[#FFFFFF] rounded-xl p-5">
+                                            <div class="flex justify-between gap-2">
+                                                <div>
+                                                    <img class="mb-[11px]" src="./Assets/img/projects/rating/1.png" alt="">
+                                                    <img src="./Assets/img/projects/rating/5-star.png" alt="">
+                                                </div>
+                                                <div class="text-right">
+                                                    <h5
+                                                        class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
+                                                        4.9
+                                                    </h5>
+                                                    <p
+                                                        class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
+                                                        140 Reviews
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="bg-[#FFFFFF] rounded-xl p-5">
-                                        <div class="flex justify-between gap-2">
-                                            <div>
-                                                <img class="mb-[11px]" src="./Assets/img/projects/rating/2.png" alt="">
-                                                <img src="./Assets/img/projects/rating/5-star.png" alt="">
-                                            </div>
-                                            <div class="text-right">
-                                                <h5
-                                                    class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
-                                                    4.9
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
-                                                    877 Reviews
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="bg-[#FFFFFF] rounded-xl p-5">
-                                        <div class="flex justify-between gap-2">
-                                            <div>
-                                                <img class="mb-[11px]" src="./Assets/img/projects/rating/3.png" alt="">
-                                                <img src="./Assets/img/projects/rating/5-star.png" alt="">
-                                            </div>
-                                            <div class="text-right">
-                                                <h5
-                                                    class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
-                                                    4.8
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
-                                                    320 Reviews
-                                                </p>
+                                    <div class="">
+                                        <div class="bg-[#FFFFFF] rounded-xl p-5">
+                                            <div class="flex justify-between gap-2">
+                                                <div>
+                                                    <img class="mb-[11px]" src="./Assets/img/projects/rating/2.png" alt="">
+                                                    <img src="./Assets/img/projects/rating/5-star.png" alt="">
+                                                </div>
+                                                <div class="text-right">
+                                                    <h5
+                                                        class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
+                                                        4.9
+                                                    </h5>
+                                                    <p
+                                                        class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
+                                                        877 Reviews
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="bg-[#FFFFFF] rounded-xl p-5">
-                                        <div class="flex justify-between gap-2">
-                                            <div>
-                                                <img class="mb-[11px]" src="./Assets/img/projects/rating/2.png" alt="">
-                                                <img src="./Assets/img/projects/rating/5-star.png" alt="">
-                                            </div>
-                                            <div class="text-right">
-                                                <h5
-                                                    class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
-                                                    4.9
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
-                                                    877 Reviews
-                                                </p>
+                                    <div class="">
+                                        <div class="bg-[#FFFFFF] rounded-xl p-5">
+                                            <div class="flex justify-between gap-2">
+                                                <div>
+                                                    <img class="mb-[11px]" src="./Assets/img/projects/rating/3.png" alt="">
+                                                    <img src="./Assets/img/projects/rating/5-star.png" alt="">
+                                                </div>
+                                                <div class="text-right">
+                                                    <h5
+                                                        class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
+                                                        4.8
+                                                    </h5>
+                                                    <p
+                                                        class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
+                                                        320 Reviews
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="bg-[#FFFFFF] rounded-xl p-5">
-                                        <div class="flex items-center justify-between gap-2">
-                                            <div>
-                                                <img class="mb-[11px]" src="./Assets/img/projects/rating/4.png" alt="">
+                                    <div class="">
+                                        <div class="bg-[#FFFFFF] rounded-xl p-5">
+                                            <div class="flex justify-between gap-2">
+                                                <div>
+                                                    <img class="mb-[11px]" src="./Assets/img/projects/rating/2.png" alt="">
+                                                    <img src="./Assets/img/projects/rating/5-star.png" alt="">
+                                                </div>
+                                                <div class="text-right">
+                                                    <h5
+                                                        class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
+                                                        4.9
+                                                    </h5>
+                                                    <p
+                                                        class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
+                                                        877 Reviews
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="text-right">
-                                                <h5
-                                                    class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
-                                                    1M+
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
-                                                    590 Reviews
-                                                </p>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="bg-[#FFFFFF] rounded-xl p-5">
+                                            <div class="flex items-center justify-between gap-2">
+                                                <div>
+                                                    <img class="mb-[11px]" src="./Assets/img/projects/rating/4.png" alt="">
+                                                </div>
+                                                <div class="text-right">
+                                                    <h5
+                                                        class="text-[#111111] font-extrabold text-[28px] leading-[20px] tracking-[2px] font-[Manrope] mb-[8px]">
+                                                        1M+
+                                                    </h5>
+                                                    <p
+                                                        class="text-[#111111] md:opacity-60 text-[14px] leading-[22px] font-[Manrope] font-semibold uppercase whitespace-nowrap">
+                                                        590 Reviews
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -337,33 +365,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-3 h-full">
-                        <div id="project-wrapper" class="project-wrapper sm:h-[650px] no-scrollbar">
-                            <div id="project-item" class="item h-fit mb-10">
-                                <div class="relative flex flex-col h-full">
-                                    <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
-                                        <div>
-                                            <h5
-                                                class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
-                                                Case Study
-                                            </h5>
-                                            <p
-                                                class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                Transforming Businesses with Technology That Transcends <br
-                                                    class="hidden md:block"> Geographies and
-                                                Platforms
-                                            </p>
-                                        </div>
 
-                                        <a href="/"
-                                            class="btn btn-primary uppercase font-medium font-[poppins]">Get
-                                            Let’s discuss your project!
-                                        </a>
-                                    </div>
-                                    <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
-                                        src="./Assets/img/projects/1.png" alt="">
-                                    <div
-                                        class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
+                    <!-- ======================= Case Study Section STARTED ======================= -->
+                    <div class="lg:col-span-3">
+                        <div class="cdu-project-cards cards">
+                            <div class="cdu-project-card card item h-fit mb-10" data-index="0">
+                                <div class="cdu-project-card-inner card__inner relative flex flex-col h-full card1">
+                                     <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
+                                            <div>
+                                                <h5
+                                                    class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
+                                                    Case Study
+                                                </h5>
+                                                <p
+                                                    class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                                    Transforming Businesses with Technology That Transcends <br
+                                                        class="hidden md:block"> Geographies and
+                                                    Platforms
+                                                </p>
+                                            </div>
+            
+                                            <a href="/"
+                                                class="btn btn-primary uppercase font-medium font-[poppins]">Get
+                                                Let’s discuss your project!
+                                            </a>
+                                        </div>
+                                        <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
+                                            src="./Assets/img/projects/1.png" alt="">
+                                        <div class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
                                         <div>
                                             <h5
                                                 class="text-[#111111] text-[16px] md:text-[20px] leading-[18px] font-[manrope] font-bold mb-3 tracking-[2px] uppercase md:capitalize">
@@ -385,216 +414,157 @@
                                             <span
                                                 class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px] group-hover/item:w-full group-hover/item:bg-[#111111] transition-all duration-300"></span>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
-                            <div id="project-item" class="item h-fit">
-                                <div class="relative flex flex-col h-full">
-                                    <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
-                                        <div>
-                                            <h5
-                                                class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
-                                                Case Study
-                                            </h5>
-                                            <p
-                                                class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                Transforming Businesses with Technology That Transcends <br
-                                                    class="hidden md:block"> Geographies and
-                                                Platforms
-                                            </p>
-                                        </div>
-
-                                        <a href="/"
-                                            class="btn btn-primary uppercase font-medium font-[poppins]">Get
-                                            Let’s discuss your project!
+            
+                            <div class="cdu-project-card card item h-fit mb-10" data-index="0">
+                                <div class="cdu-project-card-inner card__inner relative flex flex-col h-full card2">
+                                     <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
+                                    <div>
+                                        <h5
+                                            class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
+                                            Case Study
+                                        </h5>
+                                        <p
+                                            class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                            Transforming Businesses with Technology That Transcends <br
+                                                class="hidden md:block"> Geographies and
+                                            Platforms
+                                        </p>
+                                    </div>
+            
+                                    <a href="/"
+                                        class="btn btn-primary uppercase font-medium font-[poppins]">Get
+                                        Let’s discuss your project!
+                                    </a>
+                                </div>
+                                <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
+                                    src="./Assets/img/projects/1.png" alt="">
+                                <div
+                                    class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
+                                    <div>
+                                        <h5
+                                            class="text-[#111111] text-[16px] md:text-[20px] leading-[18px] font-[manrope] font-bold mb-3 tracking-[2px] uppercase md:capitalize">
+                                            Treading leads
+                                        </h5>
+                                        <p
+                                            class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                            A disruptive concept for an immersive experience of the financial
+                                            markets making
+                                            <br class="hidden md:block">
+                                            trading accessible and seamless for everyday user.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col items-end group/item">
+                                        <a href="#"
+                                            class="uppercase inline-block text-[#111111] font-semibold text-[16px] leading-[18px] font-[poppins] tracking-[2px] whitespace-nowrap">
+                                            View ALL Project
                                         </a>
+                                        <span
+                                            class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px] group-hover/item:w-full group-hover/item:bg-[#111111] transition-all duration-300"></span>
                                     </div>
-                                    <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
-                                        src="./Assets/img/projects/1.png" alt="">
-                                    <div
-                                        class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
-                                        <div>
-                                            <h5
-                                                class="text-[#111111] text-[16px] md:text-[20px] leading-[18px] font-[manrope] font-bold mb-3 tracking-[2px] uppercase md:capitalize">
-                                                Treading leads
-                                            </h5>
-                                            <p
-                                                class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                A disruptive concept for an immersive experience of the financial
-                                                markets making
-                                                <br class="hidden md:block">
-                                                trading accessible and seamless for everyday user.
-                                            </p>
-                                        </div>
-                                        <div class="flex flex-col items-end group/item">
-                                            <a href="#"
-                                                class="uppercase inline-block text-[#111111] font-semibold text-[16px] leading-[18px] font-[poppins] tracking-[2px] whitespace-nowrap">
-                                                View ALL Project
-                                            </a>
-                                            <span
-                                                class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px] group-hover/item:w-full group-hover/item:bg-[#111111] transition-all duration-300"></span>
-                                        </div>
-                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            <!-- <div class="item h-fit">
-                                <div class="relative flex flex-col h-full">
-                                    <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
-                                        <div>
-                                            <h5
-                                                class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
-                                                Case Study
-                                            </h5>
-                                            <p
-                                                class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                Transforming Businesses with Technology That Transcends <br
-                                                    class="hidden md:block"> Geographies and
-                                                Platforms
-                                            </p>
-                                        </div>
-
-                                        <a href="/"
-                                            class="btn btn-primary uppercase font-medium font-[poppins]">
-                                            Get Let’s discuss your project!
-                                        </a>
-                                    </div>
-                                    <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
-                                        src="./Assets/img/projects/1.png" alt="">
-                                    <div
-                                        class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
-                                        <div>
-                                            <h5
-                                                class="text-[#111111] text-[16px] md:text-[20px] leading-[18px] font-[manrope] font-bold mb-3 tracking-[2px] uppercase md:capitalize">
-                                                Treading leads
-                                            </h5>
-                                            <p
-                                                class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                A disruptive concept for an immersive experience of the financial
-                                                markets making
-                                                <br class="hidden md:block">
-                                                trading accessible and seamless for everyday user.
-                                            </p>
-                                        </div>
-                                        <div class="flex flex-col items-end group/item">
-                                            <a href="#"
-                                                class="uppercase inline-block text-[#111111] font-semibold text-[16px] leading-[18px] font-[poppins] tracking-[2px] whitespace-nowrap">
-                                                View ALL Project
+            
+                            <!-- <div id="project-item" class="cdu-project-card card item h-fit">
+                                    <div class="cdu-project-card-inner card__inner relative flex flex-col h-full">
+                                        <div class="flex flex-wrap gap-4 items-start justify-between mb-6 md:mb-9">
+                                            <div>
+                                                <h5
+                                                    class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-3 md:mb-5 uppercase">
+                                                    Case Study
+                                                </h5>
+                                                <p
+                                                    class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                                    Transforming Businesses with Technology That Transcends <br
+                                                        class="hidden md:block"> Geographies and
+                                                    Platforms
+                                                </p>
+                                            </div>
+            
+                                            <a href="/"
+                                                class="btn btn-primary uppercase font-medium font-[poppins]">Get
+                                                Let’s discuss your project!
                                             </a>
-                                            <span
-                                                class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px] group-hover/item:w-full group-hover/item:bg-[#111111] transition-all duration-300"></span>
+                                        </div>
+                                        <img class="w-full max-h-[180px] sm:max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
+                                            src="./Assets/img/projects/1.png" alt="">
+                                        <div
+                                            class="flex flex-wrap sm:flex-nowrap gap-6 md:gap-4 items-start justify-between mt-6 md:mt-9">
+                                            <div>
+                                                <h5
+                                                    class="text-[#111111] text-[16px] md:text-[20px] leading-[18px] font-[manrope] font-bold mb-3 tracking-[2px] uppercase md:capitalize">
+                                                    Treading leads
+                                                </h5>
+                                                <p
+                                                    class="text-[#111111] opacity-80 text-[14px] leading-[24px] font-[Manrope] font-normal">
+                                                    A disruptive concept for an immersive experience of the financial
+                                                    markets making
+                                                    <br class="hidden md:block">
+                                                    trading accessible and seamless for everyday user.
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-col items-end group/item">
+                                                <a href="#"
+                                                    class="uppercase inline-block text-[#111111] font-semibold text-[16px] leading-[18px] font-[poppins] tracking-[2px] whitespace-nowrap">
+                                                    View ALL Project
+                                                </a>
+                                                <span
+                                                    class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px] group-hover/item:w-full group-hover/item:bg-[#111111] transition-all duration-300"></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div> -->
                         </div>
-
-                        <!-- <div class="swiper mySwiper project-slider w-full h-[655px]">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="relative flex flex-col h-full">
-                                        <div class="flex flex-wrap gap-4 items-start justify-between mb-9">
-                                            <div>
-                                                <h5
-                                                    class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-[29px]">
-                                                    Case Study
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111cc] text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                    Transforming Businesses with Technology That Transcends <br
-                                                        class="hidden md:block"> Geographies and
-                                                    Platforms
-                                                </p>
-                                            </div>
-
-                                            <a href="#"
-                                                class="w-full sm:w-auto text-center bg-[#111111] whitespace-nowrap uppercase text-xs sm:text-[14px] sm:leading-[18px] font-medium tacking-[2px] inline-block text-[#FFCD3A] border border-[#111111] rounded-xl py-[14px] px-8 2xl:px-12 font-[Poppins]">Get
-                                                Let’s discuss your project!
-                                            </a>
-                                        </div>
-                                        <img class="w-full max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
-                                            src="./Assets/img/projects/1.png" alt="">
-                                        <div
-                                            class="flex flex-wrap sm:flex-nowrap gap-4 items-start justify-between mt-9">
-                                            <div>
-                                                <h5
-                                                    class="text-[#111111] text-[20px] leading-[18px] font-[Manrope] font-bold mb-3">
-                                                    Treading leads</h5>
-                                                <p
-                                                    class="text-[#111111cc] text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                    A
-                                                    disruptive concept for an immersive experience of the financial
-                                                    markets making
-                                                    <br class="hidden md:block">
-                                                    trading accessible and seamless for everyday user.
-                                                </p>
-                                            </div>
-                                            <div class="flex flex-col items-end">
-                                                <a href="#"
-                                                    class="uppercase inline-block text-[#111111] font-medium text-xs sm:text-[16px] sm:leading-[18px] font-[Manrope] tracking-[2px] whitespace-nowrap">
-                                                    View ALL Project
-                                                </a>
-                                                <span class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px]"></span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="relative flex flex-col h-full">
-                                        <div class="flex flex-wrap gap-4 items-start justify-between mb-9">
-                                            <div>
-                                                <h5
-                                                    class="text-[#111111] font-bold text-[16px] leading-[18px] tracking-[2px] font-[Manrope] mb-[29px]">
-                                                    Case Study
-                                                </h5>
-                                                <p
-                                                    class="text-[#111111cc] text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                    Transforming Businesses with Technology That Transcends <br
-                                                        class="hidden md:block"> Geographies and
-                                                    Platforms
-                                                </p>
-                                            </div>
-
-                                            <a href="#"
-                                                class="w-full sm:w-auto text-center bg-[#111111] whitespace-nowrap uppercase text-xs sm:text-[14px] sm:leading-[18px] font-medium tacking-[2px] inline-block text-[#FFCD3A] border border-[#111111] rounded-xl py-[14px] px-8 2xl:px-12 font-[Poppins]">Get
-                                                Let’s discuss your project!
-                                            </a>
-                                        </div>
-                                        <img class="w-full max-h-[408px] h-auto flex-1 object-cover rounded-2xl"
-                                            src="./Assets/img/projects/1.png" alt="">
-                                        <div
-                                            class="flex flex-wrap sm:flex-nowrap gap-4 items-start justify-between mt-9">
-                                            <div>
-                                                <h5
-                                                    class="text-[#111111] text-[20px] leading-[18px] font-[Manrope] font-bold mb-3">
-                                                    Treading leads</h5>
-                                                <p
-                                                    class="text-[#111111cc] text-[14px] leading-[24px] font-[Manrope] font-normal">
-                                                    A
-                                                    disruptive concept for an immersive experience of the financial
-                                                    markets making
-                                                    <br class="hidden md:block">
-                                                    trading accessible and seamless for everyday user.
-                                                </p>
-                                            </div>
-                                            <div class="flex flex-col items-end">
-                                                <a href="#"
-                                                    class="uppercase inline-block text-[#111111] font-medium text-xs sm:text-[16px] sm:leading-[18px] font-[Manrope] tracking-[2px] whitespace-nowrap">
-                                                    View ALL Project
-                                                </a>
-                                                <span class="block h-[1px] bg-[#FFCD3A] w-8 mt-[10px]"></span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> -->
                     </div>
+                    <!-- ======================= Case Study Section ENDED ======================= -->
                 </div>
             </div>
         </section>
+        <!-- <section>
+            <div class="cdu-project-cards cards">
+
+                <div class="cdu-project-card card item h-fit mb-10" data-index="0">
+                    <div class="cdu-project-card-inner card__inner relative flex flex-col h-full card1">
+                        <div class="card__image-container">
+                            <img class="card__image"
+                                src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+                                alt="" />
+                        </div>
+                        <div class="card__content">
+                            <h1 class="card__title">Card 1</h1>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                                error nam eaque. Eum fuga laborum quos expedita iste saepe
+                                similique, unde possimus quia at magnam sed cupiditate?
+                                Reprehenderit, harum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cdu-project-card card item h-fit mb-10" data-index="0">
+                    <div class="cdu-project-card-inner card__inner relative flex flex-col h-full card2">
+                        <div class="card__image-container">
+                            <img class="card__image"
+                                src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+                                alt="" />
+                        </div>
+                        <div class="card__content">
+                            <h1 class="card__title">Card 2</h1>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+                                error nam eaque. Eum fuga laborum quos expedita iste saepe
+                                similique, unde possimus quia at magnam sed cupiditate?
+                                Reprehenderit, harum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  -->
 
         <section class="bg-[#212121] py-12 lg:py-14 xl:pt-[120px] xl:pb-28 relative">
             <div>
@@ -624,8 +594,7 @@
                         </div>
                     </div>
                     <div class="flex items-end flex-wrap md:flex-nowrap w-full sm:w-auto">
-                        <a href="#"
-                            class="btn btn-transparent uppercase font-medium font-[poppins]">
+                        <a href="#" class="btn btn-transparent uppercase font-medium font-[poppins]">
                             Get Let’s Connect Now
                         </a>
                     </div>
@@ -810,8 +779,7 @@
                     </div>
 
                     <div class="hidden sm:block">
-                        <a href="#"
-                            class="btn btn-primary uppercase font-medium font-[poppins]">Get
+                        <a href="#" class="btn btn-primary uppercase font-medium font-[poppins]">Get
                             Let’s Connect Now
                         </a>
                     </div>
@@ -1643,8 +1611,7 @@
                 </div>
                 <div class="mt-8 md:mt-14 flex flex-wrap-reverse gap-5 justify-between">
                     <div class="w-full sm:w-auto">
-                        <a href="#"
-                            class="btn btn-primary uppercase font-medium font-[poppins]">Get
+                        <a href="#" class="btn btn-primary uppercase font-medium font-[poppins]">Get
                             Let’s connect for more information
                         </a>
                     </div>
@@ -1851,8 +1818,7 @@
                 </div>
                 <div class="flex flex-wrap-reverse gap-8 sm:gap-6 justify-between mt-8 md:mt-16">
                     <div class="w-full sm:w-auto">
-                        <a href="/"
-                            class="btn btn-primary uppercase font-medium font-[poppins]">
+                        <a href="/" class="btn btn-primary uppercase font-medium font-[poppins]">
                             Get Let’s Connect Now
                         </a>
                     </div>
@@ -2634,6 +2600,9 @@
     <script src="./Assets/js/flobite.js"></script>
     <script src="./Assets/js/slick.js"></script>
     <script src="./Assets/js/bootstrap.min.js"></script>
+    <script src="./Assets/js/aat.min.js"></script>
+
+    <!-- <script src="https://unpkg.com/aatjs/dist/aat.min.js"></script> -->
 
     <script>
         $('.client-slick').slick({
@@ -2779,17 +2748,126 @@
     </script>
 
     <script>
-        window.onload = function () {
-            var parentDiv = document.getElementById('project-wrapper');
-            var childDiv = document.getElementById('project-item');
+        // window.onload = function () {
+        //     var parentDiv = document.getElementById('project-wrapper');
+        //     var childDiv = document.getElementById('project-item');
 
-            // Get the height of the child
-            var childHeight = childDiv.offsetHeight;
+        //     // Get the height of the child
+        //     var childHeight = childDiv.offsetHeight;
 
-            // Set the height of the parent equal to the height of the child
-            parentDiv.style.height = childHeight + 'px';
-        };
+        //     // Set the height of the parent equal to the height of the child
+        //     parentDiv.style.height = childHeight + 'px';
+        // };
     </script>
+
+    <script>
+        // Ensure that the aat.js library is properly loaded before executing this script
+
+        // Wrap your code inside a function to ensure it runs after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if aat is defined
+            if (typeof aat !== 'undefined') {
+                const { ScrollObserver, valueAtPercentage } = aat;
+
+                const cardsContainer = document.querySelector('.cdu-project-cards.cards');
+                const cards = document.querySelectorAll('.cdu-project-card.card');
+
+                // Check if cardsContainer and cards are found
+                if (cardsContainer && cards.length > 0) {
+                    cardsContainer.style.setProperty('--cards-count', cards.length);
+                    cardsContainer.style.setProperty(
+                        '--card-height',
+                        `${cards[0].clientHeight}px`
+                    );
+
+                    console.log('cards :', cards);
+                    cards.forEach((card, index) => {
+                        console.log('card :', card);
+                        const offsetTop = 20 + index * 20;
+                        console.log('offsetTop :', offsetTop);
+                        card.style.paddingTop = `${offsetTop}px`;
+
+                        // Ensure nextCard exists and has .cdu-project-card-inner
+                        const nextCard = cards[index + 1];
+                        if (nextCard) {
+                            const cardInner = card.querySelector('.cdu-project-card-inner.card__inner');
+                            console.log('cardInner :', cardInner);
+                            if (cardInner) {
+                                ScrollObserver.Element(nextCard, {
+                                    offsetTop,
+                                    offsetBottom: window.innerHeight - card.clientHeight
+                                }).onScroll(({ percentageY }) => {
+                                    console.log('percentageY :', percentageY);
+                                    const toScale = 1 - (cards.length - 1 - index) * 0.1;
+
+                                    // Apply transformation and filter based on scroll percentage
+                                    cardInner.style.transform = `scale(${valueAtPercentage({
+                                        from: 1,
+                                        to: toScale,
+                                        percentage: percentageY
+                                    })})`;
+                                    cardInner.style.filter = `brightness(${valueAtPercentage({
+                                        from: 1,
+                                        to: 0.6,
+                                        percentage: percentageY
+                                    })})`;
+                                });
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+
+
+    <!-- <script>
+        // This was built using aat.js: https://github.com/TahaSh/aat
+
+        // $(document).ready(function () {
+            console.log('aat :', aat)
+            const { ScrollObserver, valueAtPercentage } = aat;
+            
+            const cardsContainer = document.querySelector('.cdu-project-cards.cards');
+            console.log('cardsContainer :', cardsContainer);
+            const cards = document.querySelectorAll('.cdu-project-card.card');
+            console.log('cards :', cards);
+            cardsContainer.style.setProperty('--cards-count', cards.length);
+            cardsContainer.style.setProperty(
+                '--card-height',
+                `${cards[0].clientHeight}px`
+            );
+    
+            Array.from(cards).forEach((card, index) => {
+                console.log('card :', card);
+                console.log('card.clientHeight :', card.clientHeight);
+                const offsetTop = 20 + index * 20;
+                card.style.paddingTop = `${offsetTop}px`;
+                if (index === cards.length - 1) {
+                    return;
+                }
+                const toScale = 1 - (cards.length - 1 - index) * 0.1;
+                const nextCard = cards[index + 1];
+                const cardInner = card.querySelector('.cdu-project-card-inner.card__inner');
+                console.log('cardInner :', cardInner);
+                ScrollObserver.Element(nextCard, {
+                    offsetTop,
+                    offsetBottom: window.innerHeight - card.clientHeight
+                }).onScroll(({ percentageY }) => {
+                    cardInner.style.transform = `scale(${valueAtPercentage({
+                        from: 1,
+                        to: toScale,
+                        percentage: percentageY
+                    })})`;
+                    cardInner.style.filter = `brightness(${valueAtPercentage({
+                        from: 1,
+                        to: 0.6,
+                        percentage: percentageY
+                    })})`;
+                });
+            });
+        // })
+    </script> -->
 </body>
 
 </html>
