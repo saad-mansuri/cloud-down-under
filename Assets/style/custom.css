@@ -185,7 +185,10 @@ header.sticky-header {
         letter-spacing: 0;
         line-height: 1.125rem;
         text-align: center;
-        /* display: inline-block; */
+        display: inline-block;
+    }
+    .cdu-main-banner .sm-display-none{
+        display: none;
     }
 }
 
