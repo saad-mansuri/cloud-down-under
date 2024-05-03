@@ -158,6 +158,13 @@ header.sticky-header {
     /* Show the details image when hovering over the image or details image itself */
 }
 
+.our-process-left-section{
+    border-radius: 32px 0 0 32px;
+}
+.our-process-right-section{
+    border-radius: 0 32px 32px 0;
+}
+
 
 @media screen and (max-width: 1366px) {
     body {
@@ -189,6 +196,12 @@ header.sticky-header {
     }
     .cdu-main-banner .sm-display-none{
         display: none;
+    }
+    .our-process-left-section{
+        border-radius: 32px 32px 0 0 ;
+    }
+    .our-process-right-section{
+        border-radius: 0 32px 32px 0;
     }
 }
 
