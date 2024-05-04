@@ -57,17 +57,17 @@
 </a>
 
 <body class="bg-[#FFCD3A]">
-    <header class="pt-3 md:py-[34px] relative">
+    <header class="pt-3 md:py-[34px] relative cust-desktop-header">
         <!-- <img class="absolute left-0 top-0" src="./Assets/img/banner-left.png" alt=""> -->
         <img class="absolute right-0 top-0 w-1/2 md:w-auto" src="./Assets/img/banner-right.png" alt="">
         <div class="container mx-auto px-6 relative">
             <nav class="flex items-center justify-between">
-                <a class="inline-block md:hidden" href="">
+                <a class="inline-block md:hidden" href="/">
                     <img class="mob-menu" src="./Assets/img/menu-icon.svg" alt="Menu">
                 </a>
 
                 <div class="">
-                    <a href="index.html" class="inline-block mob-menu">
+                    <a href="/" class="inline-block">
                         <img class="w-20 lg:w-auto" src="./Assets/img/logo.svg" alt="Logo">
                     </a>
                 </div>
@@ -105,7 +105,7 @@
         </div>
     </header>
 
-    <header class="sticky-header py-2 md:py-6 relative shadow-lg bg-[#FFFFFFE5] hidden">
+    <header class="sticky-header py-2 md:py-6 relative shadow-lg bg-[#FFFFFFE5] hidden cust-mob-header">
         <div class="container mx-auto px-6 relative">
             <nav class="flex items-center justify-between">
                 <a class="inline-block md:hidden" href="">
@@ -241,6 +241,15 @@
                         </div>
                         <div class="pe-3">
                             <img class="" src="./Assets/img/clients/2.svg" alt="Clietns Logo 2">
+                        </div>
+                        <div class="pe-3">
+                            <img class="" src="./Assets/img/clients/4.svg" alt="Clietns Logo 4">
+                        </div>
+                        <div class="pe-3">
+                            <img class="" src="./Assets/img/clients/5.svg" alt="Clietns Logo 5">
+                        </div>
+                        <div class="pe-3">
+                            <img class="" src="./Assets/img/clients/6.svg" alt="Clietns Logo 6">
                         </div>
                     </div>
                 </div>
@@ -2689,7 +2698,7 @@
 
     <script>
         $('.client-slick').slick({
-            slidesToShow: 7,
+            slidesToShow: 9,
             slidesToScroll: 1,
             prevArrow: false,
             nextArrow: false,
@@ -2697,9 +2706,22 @@
             autoplaySpeed: 0,
             centerSlide: true,
             speed: 2500,
+            infinite: true,
             pauseOnHover: false,
             cssEase: 'linear',
             responsive: [
+            {
+                    breakpoint: 1920,
+                    settings: {
+                        slidesToShow: 9,
+                    }
+                },    
+            {
+                    breakpoint: 1640,
+                    settings: {
+                        slidesToShow: 8,
+                    }
+                },
                 {
                     breakpoint: 992,
                     settings: {
@@ -2784,6 +2806,7 @@
 
     <script>
         $(".mob-menu").click(function (e) {
+            // console.log('mob-menu');
             $(".mob-nav").slideToggle();
             $("body").toggleClass("overflow-hidden");
             e.preventDefault();
