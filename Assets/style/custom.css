@@ -147,16 +147,14 @@ header.sticky-header {
 
 
 
-.cdu-project-card__img-details {
+/* .cdu-project-card__img-details {
     display: none;
-    /* Hide the details image by default */
 }
 
 .cdu-project-card__img:hover+a .cdu-project-card__img-details,
 .cdu-project-card__img-details:hover {
     display: block;
-    /* Show the details image when hovering over the image or details image itself */
-}
+} */
 
 .our-process-left-section{
     border-radius: 32px 0 0 32px;
