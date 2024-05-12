@@ -35,11 +35,11 @@ header.sticky-header {
 }
 
 .service-slider-btn {
-    color: #C7C7C7;
+    color: #FFFFFF;
 }
 
 .service-slider-btn .arrow path {
-    fill: #C7C7C7;
+    fill: #FFFFFF;
 }
 
 .service-slider-btn .btn-thumb {
@@ -219,7 +219,7 @@ header.sticky-header {
 
 @media screen and (max-width: 910px) {
     #servicesContent{
-        height: 480px;
+        max-height: 690px;
     }
 }
 
