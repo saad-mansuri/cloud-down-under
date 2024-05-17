@@ -98,7 +98,7 @@ header.sticky-header {
     text-align: center;
 }
 
-.btn-primary {
+/* .btn-primary {
     background-color: #111111;
     color: #FFCD3A;
     border: 1px solid #111111;
@@ -108,19 +108,13 @@ header.sticky-header {
     background-color: transparent;
     color: #111111;
     border: 1px solid #111111;
-}
+} */
 
 .cdu-btn-primary {
-    /* border: 2px solid currentColor; */
-    border: 1px solid #111111;
-    /* border-radius: 3rem; */
+    /* border: 1px solid #111111; */
     color: #FFCD3A;
     background-color: #111111;
-    /* font-family: roboto; */
-    /* font-size: 4rem; */
-    /* font-weight: 100; */
     overflow: hidden;
-    /* padding: 1rem 2rem; */
     position: relative;
     text-decoration: none;
     transition: 0.2s transform ease-in-out;
@@ -129,9 +123,7 @@ header.sticky-header {
 }
 
 .cdu-btn-primary::after {
-    background-color: #FFCD3A;
-    /* border-radius: 3rem; */
-    /* border-radius: 0.75rem; */
+    background-color: #FFFFFF;
     content: '';
     display: block;
     height: 100%;
@@ -152,11 +144,57 @@ header.sticky-header {
 }
 
 .cdu-btn-primary:hover {
-    border: 1px solid #FFCD3A;
+    /* border: 1px solid #ffffff; */
     color: #111111;
     transform: scale(1.05);
     will-change: transform;
 }
+
+
+/* Tertiary */
+
+.cdu-btn-tertiary {
+    /* border: 1px solid #111111; */
+    color: #FFCD3A;
+    background-color: #111111;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.cdu-btn-tertiary::after {
+    background-color: #FFCD3A;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #111111;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.cdu-btn-tertiary:hover::after {
+    transform: translate(0, 0);
+}
+
+.cdu-btn-tertiary:hover {
+    /* border: 1px solid #FFCD3A; */
+    color: #111111;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+
+
 
 .btn-secondary {
     background-color: #ffffff;
@@ -170,8 +208,8 @@ header.sticky-header {
     border: 1px solid #111111;
 }
 
-/* .btn-secondary {
-    border: 1px solid #ffffff;
+.cdu-btn-secondary {
+    /* border: 1px solid #ffffff; */
     color: #111111;
     background-color: #ffffff;
     overflow: hidden;
@@ -180,9 +218,9 @@ header.sticky-header {
     transition: 0.2s transform ease-in-out;
     will-change: transform;
     z-index: 0;
-} */
+}
 
-/* .btn-secondary::after {
+.cdu-btn-secondary::after {
     background-color: #111111;
     border-radius: 0.75rem;
     content: '';
@@ -199,13 +237,12 @@ header.sticky-header {
     z-index: -1111;
 }
 
-.btn-secondary:hover::after {
+.cdu-btn-secondary:hover::after {
     transform: translate(0, 0);
-} */
+}
 
-.btn-secondary:hover {
-    border: 1px solid #111111;
-    /* border: 2px solid transparent; */
+.cdu-btn-secondary:hover {
+    /* border: 1px solid #111111; */
     color: #FFCD3A;
     transform: scale(1.05);
     will-change: transform;
@@ -223,6 +260,45 @@ header.sticky-header {
     border: 1px solid #000000;
 }
 
+.cdu-btn-transparent {
+    border: 1px solid #FFFFFF;
+    color: #FFCD3A;
+    background-color: #212121;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+.cdu-btn-transparent::after {
+    background-color: #FFCD3A;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #111111;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.cdu-btn-transparent:hover::after {
+    transform: translate(0, 0);
+}
+
+.cdu-btn-transparent:hover {
+    border: 1px solid #FFCD3A;
+    color: #111111;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
 .btn-learn-more {
     width: auto !important;
     background-color: transparent;
@@ -235,6 +311,92 @@ header.sticky-header {
     color: #FFCD3A;
     border: 1px solid #212121;
 }
+
+
+/* Quaternary  */
+
+.cdu-btn-quaternary {
+    /* border: 1px solid #111111; */
+    color: #FFCD3A;
+    background-color: #111111;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.cdu-btn-quaternary::after {
+    background-color: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.cdu-btn-quaternary:hover::after {
+    transform: translate(0, 0);
+}
+
+.cdu-btn-quaternary:hover {
+    /* border: 1px solid #ffffff; */
+    color: #111111;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+/* Quinary   */
+
+.cdu-btn-quinary {
+    /* border: 1px solid #111111; */
+    color: #FFCD3A;
+    background-color: #111111;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.cdu-btn-quinary::after {
+    background-color: #FFCD3A;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.cdu-btn-quinary:hover::after {
+    transform: translate(0, 0);
+}
+
+.cdu-btn-quinary:hover {
+    /* border: 1px solid #ffffff; */
+    color: #111111;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
 
 
 
