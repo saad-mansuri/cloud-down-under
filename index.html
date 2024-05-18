@@ -48,6 +48,7 @@
             grid-template-rows: repeat(var(--cards-count), var(--card-height));
             gap: 40px 0;
         }
+
         .cdu-project-card__img-parent {
             position: relative;
         }
@@ -62,48 +63,147 @@
             left: 0;
             display: none;
         }
-        
-        .cdu-menus-stick {
-    position: fixed;
-    bottom: 5%;
-    left: 45%;
-    justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all .4s ease;   
-    z-index: 99999;
-    opacity: 1;
-    pointer-events: auto;
-    height: 83px;
-    width: 226px;
-    background-color: #FFCD3A;
-    border-radius: 9999px;
-}
-.cdu-menus-wrap {
-    border-radius: 42px !important;
-    opacity: 0;
-    width: 226px;
-    pointer-events: none;
-    height: auto;
-    bottom: 10%;
-    transform: translateY(80%);
-     /* Initially hidden at the bottom */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, height 0.5s ease-in-out; /* Added height transition */
-}
-.cdu-menus-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-flow: column-reverse;
-}
-.cdu-menus-list a {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    font-size: 26px;
-    font-weight: 700;
-}
 
+        .cdu-menus-stick {
+            position: fixed;
+            bottom: 5%;
+            left: 45%;
+            justify-content: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .4s ease;
+            z-index: 99999;
+            opacity: 1;
+            pointer-events: auto;
+            /* height: 83px; */
+            width: 226px;
+            background-color: #FFCD3A;
+            border-radius: 9999px;
+        }
+
+        .cdu-menus-wrap {
+            border-radius: 42px !important;
+            opacity: 0;
+            width: 226px;
+            pointer-events: none;
+            height: auto;
+            bottom: 10%;
+            transform: translateY(80%);
+            /* Initially hidden at the bottom */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, height 0.5s ease-in-out;
+            /* Added height transition */
+        }
+
+        .cdu-menus-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-flow: column-reverse;
+        }
+
+        .cdu-menus-list a {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        /* #toggle-container ul{
+            display:flex;
+            flex-direction: column;
+            flex-flow:row-reverse;
+        } */
+        #toggle-container ul li {
+            font-size: 24px;
+            padding: 18px;
+            transition: background 0.5s ease;
+            border-radius: 42px;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+        }
+
+        #toggle-container ul li:hover {
+            background: #FFCD3A;
+            /* border-radius: 42px; */
+        }
+
+        #toggle-container {
+            /* background-color: #222;
+            border: 0px dashed #999;
+            position: fixed;
+            bottom: 10%;
+            width: auto;
+            left:45% */
+
+            position: fixed;
+            bottom: 5%;
+            left: 45%;
+            justify-content: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .4s ease;
+            z-index: 99999;
+            opacity: 1;
+            pointer-events: auto;
+            /* height: 83px; */
+            width: 226px;
+            background-color: #ffffff;
+            border-radius: 42px;
+        }
+
+        #menu {
+            /* display: flex; */
+            display: none;
+            /* Initially hide the menu */
+            flex-direction: column;
+            flex-flow: column-reverse;
+            color: #111111;
+            /* display: none; */
+            line-height: 30px;
+            list-style: none;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+            width: auto;
+        }
+
+        #toggle {
+            background-color: rgba(0, 0, 0, 0);
+            border: 0px solid rgba(0, 0, 0, 0);
+            cursor: pointer;
+            height: inherit;
+            margin: 20px auto;
+            width: 50px;
+        }
+
+        #toggle div {
+            border-radius: 42px !important;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-color: #111111;
+            height: 5px;
+            margin: 10px auto;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        #toggle.on .one {
+            -ms-transform: rotate(45deg) translate(12px, 13px);
+            -webkit-transform: rotate(45deg) translate(12px, 13px);
+            transform: rotate(45deg);
+            transform-origin: 20% 40%;
+        }
+
+        #toggle.on .two {
+            opacity: 0;
+        }
+
+        #toggle.on .three {
+            -ms-transform: rotate(-45deg) translate(7px, -10px);
+            -webkit-transform: rotate(-45deg) translate(7px, -10px);
+            transform: rotate(-45deg) translate(7px, -10px);
+        }
     </style>
 </head>
 
@@ -115,7 +215,38 @@
 
 <body class="bg-[#FFCD3A]">
 
-    <div class="absolute" style="left:45%; bottom:5%">
+    <div id="toggle-container">
+
+        <ul id="menu" class="cdu-header-menus-list">
+            <a href="#home">
+                <li>Home</li>
+            </a>
+            <a href="#services">
+                <li>Services</li>
+            </a>
+            <a href="#work">
+                <li>Work</li>
+            </a>
+            <a href="#about">
+                <li>About</li>
+            </a>
+            <a href="#careers">
+                <li>Careers</li>
+            </a>
+            <a href="#insights">
+                <li>Insights</li>
+            </a>
+        </ul>
+
+        <div id="toggle" class="toggle-menu-btn">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+
+    </div>
+
+    <!-- <div class="absolute" style="left:45%; bottom:5%">
         <button class="cdu-menus-stick" id="showMenus">Show Menu</button>
         <nav class="cdu-menus-wrap cdu-menus-stick"id="menusWrap">
             <div class="cdu-menus-list" id="menusList">
@@ -126,7 +257,7 @@
                 <a href="#home">Project</a>
             </div>
         </nav>
-    </div>
+    </div> -->
     <!-- ======================= Header Section STARTED ======================= -->
     <!-- <header class="pt-3 md:py-[34px] relative cust-desktop-header">
         <img class="absolute right-0 top-0 w-1/2 md:w-auto" src="./Assets/img/banner-right.png" alt="">
@@ -465,7 +596,8 @@
                                             </p>
                                         </div>
 
-                                        <a href="#" class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
+                                        <a href="#"
+                                            class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
                                             Let’s discuss your project!
                                         </a>
                                     </div>
@@ -520,7 +652,8 @@
                                             </p>
                                         </div>
 
-                                        <a href="#" class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
+                                        <a href="#"
+                                            class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
                                             Let’s discuss your project!
                                         </a>
                                     </div>
@@ -575,7 +708,8 @@
                                             </p>
                                         </div>
 
-                                        <a href="#" class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
+                                        <a href="#"
+                                            class="btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
                                             Let’s discuss your project!
                                         </a>
                                     </div>
@@ -837,9 +971,9 @@
                     </div>
 
                     <!-- <div class=""> -->
-                        <a href="#" class="hidden sm:block btn cdu-btn-quaternary uppercase font-medium font-[poppins]">Get
-                            Let’s Connect Now
-                        </a>
+                    <a href="#" class="hidden sm:block btn cdu-btn-quaternary uppercase font-medium font-[poppins]">Get
+                        Let’s Connect Now
+                    </a>
                     <!-- </div> -->
                 </div>
 
@@ -933,7 +1067,8 @@
                             id="servicesContent" data-spy="scroll" data-target=".service-slider-nav" data-offset="0">
 
                             <!-- Design Section Content -->
-                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 design-section service-slider-content" id="design-section">
+                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 design-section service-slider-content"
+                                id="design-section">
                                 <div class="service-scroll-content py-8">
                                     <div class="mb-4">
                                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center border-b border-[#1111111a] sm:border-0 gap-8 sm:gap-12"
@@ -1273,7 +1408,8 @@
                             </div>
 
                             <!-- Build  Section Content -->
-                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 build-section service-slider-content" id="build-section">
+                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 build-section service-slider-content"
+                                id="build-section">
                                 <div class="service-scroll-content py-8">
                                     <div class="mb-4">
                                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center border-b border-[#1111111a] sm:border-0 gap-8 sm:gap-12"
@@ -1613,7 +1749,8 @@
                             </div>
 
                             <!-- Support Section Content -->
-                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 support-slide service-slider-content" id="support-slide">
+                            <div class="px-6 md:px-8 bg-white border border-[#F8CFCF] rounded-[32px] mb-10 support-slide service-slider-content"
+                                id="support-slide">
                                 <div class="service-scroll-content py-8">
                                     <div class="mb-4">
                                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center border-b border-[#1111111a] sm:border-0 gap-8 sm:gap-12"
@@ -2116,9 +2253,9 @@
                 </div>
                 <div class="mt-8 md:mt-14 flex flex-wrap-reverse gap-5 justify-between">
                     <!-- <div class=""> -->
-                        <a href="#" class="w-full sm:w-auto btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
-                            Let’s connect for more information
-                        </a>
+                    <a href="#" class="w-full sm:w-auto btn cdu-btn-tertiary uppercase font-medium font-[poppins]">Get
+                        Let’s connect for more information
+                    </a>
                     <!-- </div> -->
                     <div class="flex flex-col items-end w-fit ml-auto group/item">
                         <a href="#"
@@ -2157,8 +2294,7 @@
                     <div class="swiper mySwiper testimonial-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#FFFFFFB2] p-6 md:p-8 gap-4 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#FFFFFFB2] p-6 md:p-8 gap-4 rounded-2xl h-full">
                                     <p
                                         class="text-[#000000CC] font-[poppins] font-normal text-[16px] leading-[30px] md:text-xl lg:text-2xl xl:text-[24px] xl:leading-[38px]">
                                         Thanks to Blox, we could find, visit and buy our perfect home from the comfort
@@ -2182,8 +2318,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-9 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-9 rounded-2xl h-full">
                                     <div class="lg:flex-1 relative">
                                         <img class="w-full max-h-[250px] sm:max-h-[320px]"
                                             src="./Assets/img/testimonials/thumb2.png" alt="">
@@ -2209,8 +2344,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-4 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-4 rounded-2xl h-full">
 
                                     <div>
                                         <img class="w-full h-32 sm:h-48 rounded-3xl mb-6"
@@ -2239,8 +2373,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#FFFFFFB2] p-6 md:p-8 gap-4 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#FFFFFFB2] p-6 md:p-8 gap-4 rounded-2xl h-full">
                                     <p
                                         class="text-[#000000CC] font-[poppins] font-normal text-[16px] leading-[30px] md:text-xl lg:text-2xl xl:text-[24px] xl:leading-[38px]">
                                         Thanks to Blox, we could find, visit and buy our perfect home from the comfort
@@ -2264,8 +2397,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-9 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-9 rounded-2xl h-full">
                                     <div class="lg:flex-1 relative">
                                         <img class="w-full max-h-[250px] sm:max-h-[320px]"
                                             src="./Assets/img/testimonials/thumb2.png" alt="">
@@ -2291,8 +2423,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide h-auto">
-                                <div
-                                    class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-4 rounded-2xl h-full">
+                                <div class="flex flex-col bg-[#ffffffb3] p-6 md:p-8 gap-4 rounded-2xl h-full">
 
                                     <div>
                                         <img class="w-full h-32 sm:h-48 rounded-3xl mb-6"
@@ -2325,9 +2456,9 @@
                 </div>
                 <div class="flex flex-wrap-reverse gap-8 sm:gap-6 justify-between mt-8 md:mt-16">
                     <!-- <div class="w-full sm:w-auto"> -->
-                        <a href="#" class="w-full sm:w-auto btn cdu-btn-primary uppercase font-medium font-[poppins]">
-                            Get Let’s Connect Now
-                        </a>
+                    <a href="#" class="w-full sm:w-auto btn cdu-btn-primary uppercase font-medium font-[poppins]">
+                        Get Let’s Connect Now
+                    </a>
                     <!-- </div> -->
 
                     <div class="flex flex-col items-end w-fit ml-auto group/item">
@@ -3120,13 +3251,55 @@
 
 
     <script>
+
+        $('#toggle').click(function () {
+            $(this).toggleClass('on');
+            $('#menu').slideToggle();
+            $(this).hide()
+        });
+
+        // $('#toggle').click(function () {
+        //     $(this).toggleClass('on');
+        //     $('#menu').slideToggle(function () {
+        //         // Ensure flex properties are applied after slideToggle completes
+        //         if ($('#menu').is(':visible')) {
+        //             $('#menu').css({
+        //                 'display': 'flex',
+        //                 'flex-direction': 'column',
+        //                 'flex-flow': 'column-reverse'
+        //             });
+        //         }
+        //     });
+        //     $(this).hide();
+        // });
+
+        $('#menu').mouseleave(function () {
+            $(this).slideUp();
+            $('#toggle').show().removeClass('on');
+        });
+
+        // $('.cdu-header-menus-list').on('mouseleave', (event) => {
+        //     console.log('event :', event);
+        //     // Ensure mouse leave is valid and not just moving over child elements
+        //     if (!event.relatedTarget || !$.contains($('#menusWrap')[0], event.relatedTarget)) {
+        //         $('#toggle').show()
+        //         // $('#showMenus').css('opacity', 1);
+        //         // $('#menusWrap').css({
+        //         //     'opacity': 0,
+        //         //     // 'height':'40px',
+        //         //     'transform': 'translateY(40%)',
+        //         //     'pointer-events': 'none'
+        //         // });
+        //     }
+        // });
+
         $('#showMenus').on('click', () => {
             $('#showMenus').css('opacity', 0);
             $('#menusWrap').css({
                 'opacity': 1,
                 'transform': 'translateY(0)',
                 'pointer-events': 'auto',
-                'height':'auto',
+                'height': 'auto',
             });
         });
 
@@ -3410,15 +3583,15 @@
 
     <script>
 
-        $(document).ready(function() {
-            $(window).scroll(function() {
+        $(document).ready(function () {
+            $(window).scroll(function () {
                 var windscroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
                 var triggerPosition = windowHeight * 0.25; // 25% of window height
                 var servicesContentColumn = $('#servicesContent');
                 var servicesIconsColumn = $('#servicesIcons .list-group-item');
 
-                servicesContentColumn.find('.service-slider-content').each(function() {
+                servicesContentColumn.find('.service-slider-content').each(function () {
                     var rowOffsetTop = $(this).offset().top;
                     if (rowOffsetTop <= windscroll + triggerPosition) {
                         servicesIconsColumn.removeClass('active');
@@ -3434,7 +3607,7 @@
             // }).resize();
         });
 
-                
+
 
 
 
