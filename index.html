@@ -123,7 +123,7 @@
         }
 
         #toggle-container ul li:hover {
-            background: #FFCD3A;
+            background: #ffffff;
             /* border-radius: 42px; */
         }
 
@@ -146,8 +146,8 @@
             opacity: 1;
             pointer-events: auto;
             /* height: 83px; */
-            width: 226px;
-            background-color: #ffffff;
+            /* width: 226px; */
+            background-color: #FFCD3A;
             border-radius: 42px;
         }
 
@@ -164,7 +164,7 @@
             margin: auto;
             padding: 10px;
             text-align: center;
-            width: auto;
+            width: 208px;
         }
 
         #toggle {
@@ -172,8 +172,14 @@
             border: 0px solid rgba(0, 0, 0, 0);
             cursor: pointer;
             height: inherit;
-            margin: 20px auto;
-            width: 50px;
+            /* margin: 20px auto;
+            width: 50px; */
+
+            margin: 7px;
+            width: 208px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #toggle div {
@@ -204,6 +210,44 @@
             -webkit-transform: rotate(-45deg) translate(7px, -10px);
             transform: rotate(-45deg) translate(7px, -10px);
         }
+        .toggle-menu-btn img{ 
+            height: 72px;
+        }
+        .menu-text{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 48px;
+            opacity: 1;
+            text-transform: capitalize;
+        }
+        /* .menu-logo-icon {
+         display: inline-block;
+        } */
+
+        /* .toggle-menu-btn:hover .menu-logo-icon{
+            animation: rotate-btn .5s linear 3;
+            -webkit-animation: rotate-btn .5s linear 3;
+        }
+
+        @keyframes rotate-btn {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(-360deg);
+            }
+        } */
+        .menu-logo-icon {
+            transition: transform .2s linear;
+        }
+        .toggle-menu-btn:hover .menu-logo-icon {
+            transform: translateX(70px); /* Adjust the value to move 50px or 100px as needed */
+        }
+        .toggle-menu-btn:hover .menu-text{
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -218,30 +262,29 @@
     <div id="toggle-container">
 
         <ul id="menu" class="cdu-header-menus-list">
-            <a href="#home">
+            <a href="#home" class="font-[poppins]">
                 <li>Home</li>
             </a>
-            <a href="#services">
+            <a href="#services" class="font-[poppins]">
                 <li>Services</li>
             </a>
-            <a href="#work">
+            <a href="#work" class="font-[poppins]">
                 <li>Work</li>
             </a>
-            <a href="#about">
+            <a href="#about" class="font-[poppins]">
                 <li>About</li>
             </a>
-            <a href="#careers">
+            <a href="#careers" class="font-[poppins]">
                 <li>Careers</li>
             </a>
-            <a href="#insights">
+            <a href="#insights" class="font-[poppins]">
                 <li>Insights</li>
             </a>
         </ul>
 
         <div id="toggle" class="toggle-menu-btn">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
+            <img class="menu-logo-icon" src="./Assets/img/menu-logo.svg" alt="">
+            <span class="menu-text font-[poppins]">Menu</span>
         </div>
     </div>
 
