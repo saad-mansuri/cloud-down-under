@@ -426,6 +426,12 @@ header.sticky-header {
 #servicesIconsList {
     height: 670px;
 }
+@media (min-width:1600px) {
+    .cdu-main-banner{
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+}
 
 @media screen and (max-width: 1536px) {
     #servicesIconsList {
@@ -487,5 +493,8 @@ header.sticky-header {
         padding: 6px 14px;
         font-size: 10px;
         border-radius: 8px;
+    }
+    #toggle-container{
+        left: 23% !important;
     }
 }
