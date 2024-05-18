@@ -34,12 +34,36 @@ header.sticky-header {
     /* Firefox */
 }
 
-.service-slider-btn {
+/* .service-slider-btn {
     color: #FFFFFF;
 }
 
 .service-slider-btn .arrow path {
     fill: #FFFFFF;
+}
+
+.service-slider-btn .btn-thumb {
+    background-color: #FFFFFF;
+}
+
+.service-slider-btn.active {
+    color: #111111;
+}
+
+.service-slider-btn.active .arrow path {
+    fill: #111111;
+}
+
+.service-slider-btn.active .btn-thumb {
+    background-color: #FFCD3A;
+} */
+
+.service-slider-btn {
+    color: #C7C7C7;
+}
+
+.service-slider-btn .arrow path {
+    fill: #C7C7C7;
 }
 
 .service-slider-btn .btn-thumb {
@@ -484,7 +508,7 @@ header.sticky-header {
 
 @media screen and (max-width: 910px) {
     #servicesContent {
-        max-height: 690px;
+        max-height: 610px;
     }
 }
 
