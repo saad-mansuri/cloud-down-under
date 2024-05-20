@@ -119,11 +119,13 @@
             padding: 18px;
             transition: background 0.5s ease;
             border-radius: 42px;
-            transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            width: 90%;
+            margin: 10px auto;
         }
 
         #toggle-container ul li:hover {
-            background: #ffffff;
+            background: #FFCD3A;
             /* border-radius: 42px; */
         }
 
@@ -135,46 +137,41 @@
             width: auto;
             left:45% */
 
-            position: fixed;
+            /* position: fixed;
             bottom: 5%;
-            left: 45%;
+            left: 45%; */
+            position: relative;
             justify-content: center;
             font-weight: bold;
             text-transform: uppercase;
             transition: all .4s ease;
-            z-index: 99999;
+            z-index: 999;
             opacity: 1;
             pointer-events: auto;
-            /* height: 83px; */
-            /* width: 226px; */
-            background-color: #FFCD3A;
+            /* height: 83px;
+            width: 226px; */
+            background-color: #ffffff;
             border-radius: 42px;
         }
 
-        #menu {
-            /* display: flex; */
+        /* #menu {
             display: none;
-            /* Initially hide the menu */
             flex-direction: column;
             flex-flow: column-reverse;
             color: #111111;
-            /* display: none; */
             line-height: 30px;
             list-style: none;
             margin: auto;
             padding: 10px;
             text-align: center;
             width: 208px;
-        }
+        } */
 
         #toggle {
             background-color: rgba(0, 0, 0, 0);
             border: 0px solid rgba(0, 0, 0, 0);
             cursor: pointer;
             height: inherit;
-            /* margin: 20px auto;
-            width: 50px; */
-
             margin: 7px;
             width: 208px;
             display: flex;
@@ -194,22 +191,6 @@
             width: 100%;
         }
 
-        #toggle.on .one {
-            -ms-transform: rotate(45deg) translate(12px, 13px);
-            -webkit-transform: rotate(45deg) translate(12px, 13px);
-            transform: rotate(45deg);
-            transform-origin: 20% 40%;
-        }
-
-        #toggle.on .two {
-            opacity: 0;
-        }
-
-        #toggle.on .three {
-            -ms-transform: rotate(-45deg) translate(7px, -10px);
-            -webkit-transform: rotate(-45deg) translate(7px, -10px);
-            transform: rotate(-45deg) translate(7px, -10px);
-        }
         .toggle-menu-btn img{ 
             height: 72px;
         }
@@ -248,6 +229,20 @@
         .toggle-menu-btn:hover .menu-text{
             opacity: 0;
         }
+        .cdu-header-menus-list{
+            display: none;
+            line-height: 30px;
+            position: absolute;
+            top: 6%;
+            background: white;
+            border-radius: 42px;
+            width: 222px;
+            margin: 0;
+            left: 0;
+            text-align: center;
+            list-style: none;
+            z-index: 9999;
+        }
     </style>
 </head>
 
@@ -259,7 +254,7 @@
 
 <body class="bg-[#FFCD3A]">
 
-    <div id="toggle-container">
+    <!-- <div id="toggle-container">
 
         <ul id="menu" class="cdu-header-menus-list">
             <a href="#home" class="font-[poppins]">
@@ -286,7 +281,7 @@
             <img class="menu-logo-icon" src="./Assets/img/menu-logo.svg" alt="">
             <span class="menu-text font-[poppins]">Menu</span>
         </div>
-    </div>
+    </div> -->
 
     <img class="absolute right-0 top-0 w-1/2 md:w-auto" src="./Assets/img/banner-right.png" alt="">
 
@@ -303,7 +298,80 @@
         </nav>
     </div> -->
     <!-- ======================= Header Section STARTED ======================= -->
-    <!-- <header class="pt-3 md:py-[34px] relative cust-desktop-header">
+    <header class="pt-3 md:py-[34px] relative" id="desktopHeader">
+        <!-- <img class="absolute right-0 top-0 w-1/2 md:w-auto" src="./Assets/img/banner-right.png" alt=""> -->
+        <div class="container mx-auto px-6 relative">
+            <nav class="flex items-center justify-between">
+                <!-- <a class="inline-block" href="/">
+                    <img class="mob-menu" src="./Assets/img/menu-icon.svg" alt="Menu">
+                </a> -->
+
+                <div id="toggle-container">
+
+                    <ul id="menu" class="cdu-header-menus-list">
+                        <a href="/" class="font-[poppins]">
+                            <li>Home</li>
+                        </a>
+                        <a href="#services" class="font-[poppins]">
+                            <li>Services</li>
+                        </a>
+                        <a href="#work" class="font-[poppins]">
+                            <li>Work</li>
+                        </a>
+                        <a href="#about" class="font-[poppins]">
+                            <li>About</li>
+                        </a>
+                        <a href="#careers" class="font-[poppins]">
+                            <li>Careers</li>
+                        </a>
+                        <a href="#insights" class="font-[poppins]">
+                            <li>Insights</li>
+                        </a>
+                    </ul>
+            
+                    <div id="toggle" class="toggle-menu-btn">
+                        <img class="menu-logo-icon" src="./Assets/img/menu-yellow-iconn.png" alt="">
+                        <span class="menu-text font-[poppins]">Menu</span>
+                    </div>
+                </div>
+
+                <!-- <div class="">
+                    <a href="/" class="inline-block">
+                        <img class="w-20 lg:w-auto" src="./Assets/img/logo.svg" alt="Logo">
+                    </a>
+                </div> -->
+
+                <!-- <ul
+                    class="mob-nav hidden z-50 absolute top-full sm:left-1/2 sm:-translate-x-1/2 w-full max-w-[calc(100vw-48px)] sm:max-w-[592px] bg-[#000000f0] flex-col p-5 md:bg-transparent md:py-0 md:flex-row md:flex gap-5 md:static md:translate-x-0 md:w-auto md:max-w-fit">
+                    <li class="pb-4 md:pb-0 mb-4 md:mb-0 border-b border-[#ffffff1a] md:border-b-0">
+                        <a href="#"
+                            class="text-white md:text-[#111111] hover:text-[#FFCD3A] md:hover:text-white text-[14px] leading-[18px] tracking-[2px] uppercase font-[poppins] font-semibold transition-all duration-300">Services</a>
+                    </li>
+                    <li class="pb-4 md:pb-0 mb-4 md:mb-0 border-b border-[#ffffff1a] md:border-b-0">
+                        <a href="#"
+                            class="text-white md:text-[#111111] hover:text-[#FFCD3A] md:hover:text-white text-[14px] leading-[18px] tracking-[2px] uppercase font-[poppins] font-semibold transition-all duration-300">Work</a>
+                    </li>
+                    <li class="pb-4 md:pb-0 mb-4 md:mb-0 border-b border-[#ffffff1a] md:border-b-0">
+                        <a href="#"
+                            class="text-white md:text-[#111111] hover:text-[#FFCD3A] md:hover:text-white text-[14px] leading-[18px] tracking-[2px] uppercase font-[poppins] font-semibold transition-all duration-300">About</a>
+                    </li>
+                    <li class="pb-4 md:pb-0 mb-4 md:mb-0 border-b border-[#ffffff1a] md:border-b-0">
+                        <a href="#"
+                            class="text-white md:text-[#111111] hover:text-[#FFCD3A] md:hover:text-white text-[14px] leading-[18px] tracking-[2px] uppercase font-[poppins] font-semibold transition-all duration-300">Careers</a>
+                    </li>
+                    <li class="md:mb-0">
+                        <a href="#"
+                            class="text-white md:text-[#111111] hover:text-[#FFCD3A] md:hover:text-white text-[14px] leading-[18px] tracking-[2px] uppercase font-[poppins] font-semibold transition-all duration-300">Insights</a>
+                    </li>
+                </ul> -->
+
+                <a href="#" class="btn cdu-btn-secondary get-in-touch-btn uppercase font-medium font-[poppins]" style="width: auto !important;">
+                    Get In Touch
+                </a>
+            </nav>
+        </div>
+    </header>
+    <header class="pt-3 md:py-[34px] relative mobile-header" id="mobileHeader">
         <img class="absolute right-0 top-0 w-1/2 md:w-auto" src="./Assets/img/banner-right.png" alt="">
         <div class="container mx-auto px-6 relative">
             <nav class="flex items-center justify-between">
@@ -346,7 +414,7 @@
                     </a>
             </nav>
         </div>
-    </header> -->
+    </header>
     <!-- ======================= Header Section ENDED ======================= -->
 
     <!-- ======================= Sticky Header after Scroll Section STARTED ======================= -->
@@ -2990,7 +3058,7 @@
         $('#toggle').click(function () {
             $(this).toggleClass('on');
             $('#menu').slideToggle();
-            $(this).hide()
+            // $(this).hide()
         });
 
         // $('#toggle').click(function () {
@@ -3012,10 +3080,10 @@
             $(this).slideUp();
             $('#toggle').show().removeClass('on');
         });
-        $('#menu a').click(function () {
-            $('#menu').slideUp();
-            $('#toggle').show().removeClass('on');
-        });
+        // $('#menu a').click(function () {
+        //     $('#menu').slideUp();
+        //     $('#toggle').show().removeClass('on');
+        // });
 
         // $('.cdu-header-menus-list').on('mouseleave', (event) => {
         //     console.log('event :', event);

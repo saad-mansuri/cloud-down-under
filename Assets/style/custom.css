@@ -456,6 +456,18 @@ header.sticky-header {
 #servicesIconsList {
     height: 670px;
 }
+
+
+#desktopHeader{
+    display: block;
+}
+#mobileHeader{
+    display: none;
+}
+
+
+
+
 @media (min-width:1600px) {
     .cdu-main-banner{
         padding-top: 12rem;
@@ -526,5 +538,11 @@ header.sticky-header {
     }
     #toggle-container{
         left: 23% !important;
+    }
+    #desktopHeader{
+        display: none;
+    }
+    #mobileHeader{
+        display: block;
     }
 }
