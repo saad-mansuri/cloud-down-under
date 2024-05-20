@@ -221,10 +221,12 @@
             }
         } */
         .menu-logo-icon {
-            transition: transform .2s linear;
+            transition: transform .1s linear;
         }
         .toggle-menu-btn:hover .menu-logo-icon {
-            transform: translateX(70px); /* Adjust the value to move 50px or 100px as needed */
+            /* transform: translateX(70px); Adjust the value to move 50px or 100px as needed */
+            transform: translateX(70px) rotate(180deg); /* Adjust the values as needed */
+            transition: transform 0.3s ease;
         }
         .toggle-menu-btn:hover .menu-text{
             opacity: 0;
